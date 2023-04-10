@@ -8,7 +8,7 @@ import base64
 from io import BytesIO
 
 # to change the title and icon
-st.set_page_config(page_title="Cv2", page_icon="📷", layout="wide", initial_sidebar_state="collapsed", menu_items=None)
+st.set_page_config(page_title="Cv2", page_icon="📷", layout="wide", initial_sidebar_state="collapsed")
 st.title("Deploy cv2")  # like h1 tag
 img = st.file_uploader("Upload your image to see the result", type=['jpg', 'png'])
 
