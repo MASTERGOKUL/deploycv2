@@ -11,7 +11,7 @@ from io import BytesIO
 st.set_page_config(page_title="Cv2", page_icon="📷", layout="wide", initial_sidebar_state="collapsed")
 st.title("Deploy cv2")  # like h1 tag
 st.subheader("This App Helps you to make the detection using cascade classifier in the open cv 🖼️ ")
-st.description("To change the model of the application use the slider in the ⌜ top left corder after uploaded the image ")
+st.text("To change the model of the application use the slider in the ⌜ top left corder after uploaded the image ")
 img = st.file_uploader("Upload your image to see the result", type=['jpg', 'png'])
 
 # to make html use `st.markdown("""<html code here/>""")`
