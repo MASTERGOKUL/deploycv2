@@ -10,6 +10,7 @@ from io import BytesIO
 # to change the title and icon
 st.set_page_config(page_title="Cv2", page_icon="📷", layout="wide", initial_sidebar_state="collapsed")
 st.title("Deploy cv2")  # like h1 tag
+st.subheader("This App Helps you to make the detection using cascade classifier in the open cv 🖼️ ")
 img = st.file_uploader("Upload your image to see the result", type=['jpg', 'png'])
 
 # to make html use `st.markdown("""<html code here/>""")`
@@ -22,6 +23,7 @@ if img is not None:
         image = Image.open(img)
         # Add conditional statements to take the user input values
         with col2:
+            st.subheader("To change the model of the application use the slider in the ⌜ top left corder  ")
             st.markdown('<p style="text-align: center;">After</p>', unsafe_allow_html=True)
             st.sidebar.subheader("Select the value to change Output")
             model = st.sidebar.radio("select the model to change output",['FaceDetection','EyeDetection'])
