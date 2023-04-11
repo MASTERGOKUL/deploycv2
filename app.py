@@ -18,12 +18,12 @@ img = st.file_uploader("Upload your image to see the result", type=['jpg', 'png'
 if img is not None:
     col1, col2 = st.columns([0.5, 0.5])
     with col1:
+        st.subheader("To change the model of the application use the slider in the ⌜ top left corder  ")
         st.markdown('<p style="text-align: center;">Before</p>', unsafe_allow_html=True)
         st.image(img, use_column_width='auto')  # to show in original resolution `use_column_width ='auto'`
         image = Image.open(img)
         # Add conditional statements to take the user input values
         with col2:
-            st.subheader("To change the model of the application use the slider in the ⌜ top left corder  ")
             st.markdown('<p style="text-align: center;">After</p>', unsafe_allow_html=True)
             st.sidebar.subheader("Select the value to change Output")
             model = st.sidebar.radio("select the model to change output",['FaceDetection','EyeDetection'])
